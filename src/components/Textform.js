@@ -34,9 +34,9 @@ export default function Textform(props) {
             <div className="mb-3">
                 <textarea className={`form-control text-${(props.mode==='dark' || props.mode==='success')?'light':'dark'}`} style={{backgroundColor: (props.mode==='dark' || props.mode==='success')?'rgb(128 125 125)':'#fff'}} value={text} id="textBox" onChange={handleOnChange} rows="8"></textarea>
             </div>
-            <button className={`btn btn-${props.mode==='success'?'success':'primary'} btn-sm m-2`} onClick={toUppercae} >Convert To Uppercase</button>
-            <button className={`btn btn-${props.mode==='success'?'success':'primary'} btn-sm m-2`} onClick={toLowercase} >Convert To Uppercase</button>
-            <button className={`btn btn-${props.mode==='success'?'success':'primary'} btn-sm m-2`} onClick={clearText} >Clear Text</button>
+            <button className={`btn btn-${props.mode==='success'?'success':'primary'} btn-sm mx-2 my-3`} onClick={toUppercae} >Convert To Uppercase</button>
+            <button className={`btn btn-${props.mode==='success'?'success':'primary'} btn-sm mx-2 my-3`} onClick={toLowercase} >Convert To Uppercase</button>
+            <button className={`btn btn-${props.mode==='success'?'success':'primary'} btn-sm mx-2 my-3`} onClick={clearText} >Clear Text</button>
         </div>
         <div className="container my-2">
             <h2 className={`text-${props.mode==='light'?'dark':'light'}`} >Text Summary</h2>

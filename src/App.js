@@ -4,11 +4,6 @@ import Textform from './components/Textform'
 import Alert from './components/Alert'
 import AboutUs from './components/AboutUs'
 
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
 
 export default function App() {
   const [mode, setMode] = useState('light')
@@ -55,22 +50,14 @@ export default function App() {
     }
 
   }
-
-
+  
   return (
-    <><BrowserRouter>
-    <Navbar logo="TextUtils" title="About TextUtils" mode={mode} modeControl={changeMode} greenMode={greenMode} />
+    <>
+      <Navbar logo="TextUtils" title="About TextUtils" mode={mode} modeControl={changeMode} greenMode={greenMode} />
       <Alert alert={alert} />
-        {/* <div className="container my-3">
-          <Textform heading="Enter The Text To Analyze Below" mode={mode} showAlert={showAlert} />
-          <AboutUs />
-        </div> */}
-        <Routes>
-          <Route path='/' element={<Textform  heading="Enter The Text To Analyze Below" mode={mode} showAlert={showAlert} />} />
-          <Route path='/about' element={<AboutUs/>}  />
-        </Routes>
-      </BrowserRouter>
-
+      <div className="container my-3">
+        <Textform heading="Enter The Text To Analyze Below" mode={mode} showAlert={showAlert} />
+      </div>
     </>
   )
 }

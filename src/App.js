@@ -50,13 +50,13 @@ export default function App() {
     }
 
   }
-  
+
   return (
     <>
       <Navbar logo="TextUtils" title="About TextUtils" mode={mode} modeControl={changeMode} greenMode={greenMode} />
       <Alert alert={alert} />
       <div className="container my-3">
-        <Textform heading="Enter The Text To Analyze Below" mode={mode} showAlert={showAlert} />
+        <Textform heading="Enter The Text To Convert Lowercase | UpperCase" mode={mode} showAlert={showAlert} />
       </div>
     </>
   )

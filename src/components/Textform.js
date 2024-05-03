@@ -40,8 +40,8 @@ export default function Textform(props) {
         </div>
         <div className="container my-2">
             <h2 className={`text-${props.mode==='light'?'dark':'light'}`} >Text Summary</h2>
-            <p className={`text-${props.mode==='light'?'dark':'light'}`} >{(text.length === 0)?(0):text.length} characters {(text.length === 0)?(0):text.split(' ').length} words</p>
-            <p className={`text-${props.mode==='light'?'dark':'light'}`} >{((text.length>0)?(0.008 * text.split(' ').length):(0 * text.split(' ').length))} Mintues to read</p>
+            <p className={`text-${props.mode==='light'?'dark':'light'}`} >{text.split(/\s+/).filter((element)=>{return element !== 0}).length} characters {text.length} words</p>
+            <p className={`text-${props.mode==='light'?'dark':'light'}`} >{0.008 * text.split(" ").filter((element)=>{return element.length!== 0}).length} Mintues to read</p>
             <h2 className={`text-${props.mode==='light'?'dark':'light'}`} >Preview</h2>
             <p className={`text-${props.mode==='light'?'dark':'light'}`} >{text.length>0?text:'Nothing to Preview'}</p>
         </div>

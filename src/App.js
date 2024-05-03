@@ -47,7 +47,7 @@ export default function App() {
         <div className="container my-3"></div>
         <Routes>
           <Route
-            path="/home"
+            path="/"
             element={
               <Textform
                 heading="Enter The Text To Convert Lowercase | UpperCase"

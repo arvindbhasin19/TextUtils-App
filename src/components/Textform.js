@@ -45,6 +45,10 @@ export default function Textform(props) {
             <h2 className={`text-${props.mode==='light'?'dark':'light'}`} >Preview</h2>
             <p className={`text-${props.mode==='light'?'dark':'light'}`} >{text.length>0?text:'Nothing to Preview'}</p>
         </div>
+
+            <div style={{position: "fixed", bottom: 0, left: "50%", transform: "translateX(-50%)", textAlign: "center"}}>
+                Made by Arvind Bhasin
+            </div>
         </>
     )
 }
